@@ -4,15 +4,31 @@
     <projectFile profileName="http">WebApi/WebApi.csproj</projectFile>
     <projectFile profileName="https">WebApi/WebApi.csproj</projectFile>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="69a88c77-e146-4b65-80db-c4e5f62b40bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend-parking.sln" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppCore/Exceptions/NotValidPlateNumberException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppCore/Models/Car.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppCore/Repositories/ICarRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppCore/Repositories/IGenericRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppCore/ValueObjects/PlateNumber.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/Memory/MemoryCarRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend-parking/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend-parking/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppCore/Class1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Class1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/WebApi.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="autoShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -86,7 +102,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1772293618722</updated>
-      <workItem from="1772293619994" duration="310000" />
+      <workItem from="1772293619994" duration="3353000" />
     </task>
     <servers />
   </component>
