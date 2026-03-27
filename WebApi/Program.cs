@@ -6,7 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-builder.Services.AddScoped<ICarRepository, MemoryCarRepository>();
+builder.Services.AddScoped<IParkingGateRepository, MemoryParkingGateRepository>();
+builder.Services.AddScoped<IParkingSessionRepository, MemoryParkingSessionRepository>();
+builder.Services.AddScoped<IVehicleRepository, MemoryVehicleRepository>();
 
 var app = builder.Build();
 
@@ -18,10 +20,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app
-    .MapGet(
-        "/api/cars/{number}",
-        async (ICarRepository repository, string number, HttpContext httpContext) => await repository.FindByPlateNumber(number))
-    .WithName("");
+// app
+//     .MapGet(
+//         "/api/cars/{number}",
+//         async (ICarRepository repository, string number, HttpContext httpContext) => await repository.FindByPlateNumber(number))
+//     .WithName("");
 
 app.Run();

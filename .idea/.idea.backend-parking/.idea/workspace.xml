@@ -9,18 +9,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69a88c77-e146-4b65-80db-c4e5f62b40bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/AppCore/Exceptions/NotValidPlateNumberException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppCore/Models/Car.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppCore/Repositories/ICarRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppCore/Repositories/IGenericRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppCore/ValueObjects/PlateNumber.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Memory/MemoryCarRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppCore/Dtos/CameraCaptureDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppCore/Dtos/GateDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppCore/Dtos/ParkingSessionDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppCore/Dtos/StatsDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppCore/Dtos/TariffDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppCore/Dtos/VehicleDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppCore/Models/CameraCapture.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppCore/Models/EntityBase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppCore/Models/ParkingGate.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppCore/Models/ParkingSession.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppCore/Models/ParkingTariff.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppCore/Models/Vehicle.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppCore/Repositories/IGenericRepositoryAsync.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppCore/Repositories/IParkingGateRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppCore/Repositories/IParkingSessionRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppCore/Repositories/IVehicleRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppCore/ValueObjects/PagedResult.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/Memory/MemoryGenericRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/Memory/MemoryParkingGateRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/Memory/MemoryParkingSessionRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/Memory/MemoryVehicleRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnitTest/MemoryGenericRepositoryTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend-parking/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend-parking/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.backend-parking/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend-parking/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppCore/Class1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Class1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppCore/AppCore.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AppCore/AppCore.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppCore/Exceptions/NotValidPlateNumberException.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppCore/Models/Car.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppCore/Repositories/ICarRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppCore/Repositories/IGenericRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppCore/ValueObjects/PlateNumber.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Memory/MemoryCarRepository.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApi/WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/WebApi.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend-parking.sln" beforeDir="false" afterPath="$PROJECT_DIR$/backend-parking.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,47 +54,66 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/AppCore/Dtos/CameraCaptureDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AppCore/Dtos/GateDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AppCore/Dtos/ParkingSessionDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AppCore/Dtos/StatsDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AppCore/Dtos/TariffDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AppCore/Dtos/VehicleDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AppCore/Models/CameraCapture.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AppCore/Models/EntityBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AppCore/Models/ParkingGate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AppCore/Models/ParkingSession.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AppCore/Models/ParkingTariff.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AppCore/Models/Vehicle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AppCore/Repositories/IParkingGateRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AppCore/Repositories/IParkingSessionRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AppCore/Repositories/IVehicleRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AppCore/ValueObjects/PagedResult.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Infrastructure/Memory/MemoryGenericRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Infrastructure/Memory/MemoryParkingGateRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Infrastructure/Memory/MemoryParkingsessionRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Infrastructure/Memory/MemoryVehicleRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnitTest/MemoryGenericRepositoryTest.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="3AIwunpeDPvf3fmq5WJAP8EYs3h" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.WebApi: http.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "D:\\Users\\damian.kocjan\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "D:\\Users\\damian.kocjan\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "D:\\Users\\damian.kocjan\\AppData\\Local\\Symbols\\src"
-    ]
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.WebApi: http.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.WebApi: http">
     <configuration name="WebApi: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/WebApi/WebApi.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net9.0" />
       <option name="LAUNCH_PROFILE_NAME" value="http" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
       <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
       <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
       <option name="SEND_DEBUG_REQUEST" value="1" />
       <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <option name="AUTO_ATTACH_CHILDREN" value="0" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2">
         <option name="Build" />
       </method>
@@ -82,13 +122,14 @@
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/WebApi/WebApi.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net9.0" />
       <option name="LAUNCH_PROFILE_NAME" value="https" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
       <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
       <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
       <option name="SEND_DEBUG_REQUEST" value="1" />
       <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <option name="AUTO_ATTACH_CHILDREN" value="0" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2">
         <option name="Build" />
       </method>
@@ -103,6 +144,8 @@
       <option name="presentableId" value="Default" />
       <updated>1772293618722</updated>
       <workItem from="1772293619994" duration="3353000" />
+      <workItem from="1773502333538" duration="4351000" />
+      <workItem from="1774639430611" duration="6669000" />
     </task>
     <servers />
   </component>
@@ -123,5 +166,23 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
