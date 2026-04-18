@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "83bc7c0c-f737-40f5-9752-aea30430c759",
+      "name": "Entry Gate",
+      "type": "Entry",
+      "location": "Main Gate",
+      "isOperational": false
+    },
+    {
+      "id": "cce6ee16-89fb-462b-9dff-969b39e847e6",
+      "name": "Parking Gate",
+      "type": "Exit",
+      "location": "Main Gate",
+      "isOperational": false
+    }
+  ],
+  "totalCount": 2,
+  "page": 1,
+  "pageSize": 100,
+  "totalPages": 1,
+  "hasNext": false,
+  "hasPrevious": false
+}

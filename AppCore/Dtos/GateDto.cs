@@ -29,3 +29,21 @@ public record CreateGateDto(
         };
     }
 };
+
+public record UpdateGateDto(
+    Guid Id,
+    string Name,
+    string Type
+)
+{
+    public ParkingGate ToEntity()
+    {
+        var type = Enum.Parse<GateType>(Type);
+        return new ParkingGate()
+        {
+            Id = Id,
+            Name = Name,
+            Type = type
+        };
+    }
+}

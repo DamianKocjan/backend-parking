@@ -1,0 +1,14 @@
+{
+  "type": "https://tools.ietf.org/html/rfc9110#section-15.5.1",
+  "title": "One or more validation errors occurred.",
+  "status": 400,
+  "errors": {
+    "Name": [
+      "Nazwa zawiera niedozwolone znaki."
+    ],
+    "Location": [
+      "Lokalizacja zawiera niedozwolone znaki."
+    ]
+  },
+  "traceId": "00-4c973717b32966bac826c6c346fbf660-17afb835777544fb-00"
+}

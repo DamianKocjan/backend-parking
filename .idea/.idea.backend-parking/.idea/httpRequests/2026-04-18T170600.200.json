@@ -1,0 +1,7 @@
+{
+  "id": "cce6ee16-89fb-462b-9dff-969b39e847e6",
+  "name": "Parking Gate",
+  "type": "Exit",
+  "location": "Main Gate",
+  "isOperational": false
+}

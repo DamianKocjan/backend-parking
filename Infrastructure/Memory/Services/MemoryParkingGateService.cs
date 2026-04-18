@@ -1,4 +1,5 @@
 using AppCore.Dtos;
+using AppCore.Models;
 using AppCore.Repositories;
 using AppCore.Services;
 using AppCore.ValueObjects;
@@ -15,6 +16,26 @@ public class MemoryParkingGateService(IParkingUnitOfWork unit) : IParkingGateSer
             return null;
         }
 
+        return await Task.FromResult(new ParkingGateDto(
+            entity.Id,
+            entity.Name,
+            entity.Type.ToString(),
+            entity.Location,
+            entity.IsOperational)
+        );
+    }
+
+    public async Task<ParkingGateDto?> Update(Guid id, UpdateGateDto updateGateDto)
+    {
+        var entity = await unit.Gates.FindByIdAsync(id);
+        if (entity is null)
+        {
+            return null;
+        }
+        
+        entity.Name = updateGateDto.Name;
+        entity.Type = Enum.Parse<GateType>(updateGateDto.Type);
+        await unit.Gates.UpdateAsync(entity);
         return entity;
     }
 
@@ -26,7 +47,13 @@ public class MemoryParkingGateService(IParkingUnitOfWork unit) : IParkingGateSer
             return null;
         }
 
-        return entity;
+        return await Task.FromResult(new ParkingGateDto(
+            entity.Id,
+            entity.Name,
+            entity.Type.ToString(),
+            entity.Location,
+            entity.IsOperational)
+        );
     }
 
     public async Task<PagedResult<ParkingGateDto>> GetAllPaged(int page, int size)

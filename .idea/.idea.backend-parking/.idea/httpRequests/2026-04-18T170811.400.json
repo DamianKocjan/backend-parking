@@ -1,0 +1,17 @@
+{
+  "type": "https://tools.ietf.org/html/rfc9110#section-15.5.1",
+  "title": "One or more validation errors occurred.",
+  "status": 400,
+  "errors": {
+    "Name": [
+      "The Name field is required.",
+      "Nazwa bramik jest wymagana."
+    ],
+    "Type": [
+      "The Type field is required.",
+      "Typ bramki jest wymagany.",
+      "Nieprawidłowy typ bramki. Dozwolone wartości: Entry, Exit, Both."
+    ]
+  },
+  "traceId": "00-6501913daa380f6538deec091a3b5d8a-341bede38ec31d5f-00"
+}

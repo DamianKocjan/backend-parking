@@ -6,13 +6,11 @@ public class MemoryParkingUnitOfWork(
     IVehicleRepository vehicles,
     IParkingSessionRepository sessions,
     IParkingGateRepository gates
-    // pozostałe repozytoria
 ): IParkingUnitOfWork
 {
     public IVehicleRepository Vehicles => vehicles;
     public IParkingGateRepository Gates => gates;
     public IParkingSessionRepository Sessions => sessions;
-    // pozostałe repozytoria
     
     public Task<int> SaveChangesAsync()
     {

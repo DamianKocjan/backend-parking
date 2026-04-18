@@ -1,0 +1,17 @@
+{
+  "type": "https://tools.ietf.org/html/rfc9110#section-15.5.1",
+  "title": "One or more validation errors occurred.",
+  "status": 400,
+  "errors": {
+    "Name": [
+      "Nazwa zawiera niedozwolone znaki."
+    ],
+    "Type": [
+      "Nieprawidłowy typ bramki. Dozwolone wartości: Entry, Exit, Both."
+    ],
+    "Location": [
+      "Lokalizacja zawiera niedozwolone znaki."
+    ]
+  },
+  "traceId": "00-7012b4974ed16535a70576cf21223fa2-31befbb066fed016-00"
+}

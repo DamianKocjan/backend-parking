@@ -17,6 +17,8 @@ builder.Services.AddScoped<IParkingUnitOfWork, MemoryParkingUnitOfWork>();
 
 builder.Services.AddScoped<IParkingGateService, MemoryParkingGateService>();
 
+builder.Services.AddAppCoreModule(builder.Configuration);
+
 builder.Services.AddControllers();
 
 var app = builder.Build();

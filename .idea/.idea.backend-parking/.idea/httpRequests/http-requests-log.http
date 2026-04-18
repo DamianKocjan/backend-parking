@@ -1,0 +1,235 @@
+POST http://localhost:5184/api/gates
+Content-Type: application/json
+Content-Length: 24
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.3.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "location" : "bar"
+}
+
+<> 2026-04-18T170811.400.json
+
+###
+
+GET http://localhost:5184/api/gates/cce6ee16-89fb-462b-9dff-969b39e847e6
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.3.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2026-04-18T170808.200.json
+
+###
+
+GET http://localhost:5184/api/gates
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.3.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2026-04-18T170805.200.json
+
+###
+
+PUT http://localhost:5184/api/gates/cce6ee16-89fb-462b-9dff-969b39e847e6
+Content-Type: application/json
+Content-Length: 62
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.3.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Gate",
+  "location" : "2-1b",
+  "type": "Entry"
+}
+
+<> 2026-04-18T170715.200.json
+
+###
+
+POST http://localhost:5184/api/gates
+Content-Type: application/json
+Content-Length: 24
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.3.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "location" : "bar"
+}
+
+<> 2026-04-18T170711.400.json
+
+###
+
+POST http://localhost:5184/api/students
+Content-Type: application/json
+Content-Length: 24
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.3.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "location" : "bar"
+}
+
+###
+
+POST http://localhost:5184/api/gates
+Content-Type: application/json
+Content-Length: 61
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.3.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Gate",
+  "location" : "foo",
+  "type": "Entry"
+}
+
+<> 2026-04-18T170656.201.json
+
+###
+
+POST http://localhost:5184/api/gates
+Content-Type: application/json
+Content-Length: 60
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.3.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "AB2",
+  "location" : "foo",
+  "type": "Entry"
+}
+
+<> 2026-04-18T170639.400.json
+
+###
+
+POST http://localhost:5184/api/gates
+Content-Type: application/json
+Content-Length: 59
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.3.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "AB2",
+  "location" : "21",
+  "type": "Entry"
+}
+
+<> 2026-04-18T170629.400.json
+
+###
+
+POST http://localhost:5184/api/gates
+Content-Type: application/json
+Content-Length: 59
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.3.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "AB2",
+  "location" : "21",
+  "type": "entry"
+}
+
+<> 2026-04-18T170613.400.json
+
+###
+
+POST http://localhost:5184/api/gates
+Content-Type: application/json
+Content-Length: 60
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.3.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "AB2",
+  "location" : "2-1",
+  "type": "entry"
+}
+
+<> 2026-04-18T170606.400.json
+
+###
+
+GET http://localhost:5184/api/gates/cce6ee16-89fb-462b-9dff-969b39e847e6
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.3.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2026-04-18T170600.200.json
+
+###
+
+GET http://localhost:5184/api/gates
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.3.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2026-04-18T170554.200.json
+
+###
+
+GET http://localhost:5184/api/gates/8fbd7b91-5c7f-4d85-8a33-22193b2ef718
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.3.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2026-04-18T170436.404.json
+
+###
+
+GET http://localhost:5184/api/gates
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.3.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2026-04-18T170411.200.json
+
+###
+
+GET http://localhost:5184/api/gates/cce6ee16-89fb-462b-9dff-969b39e847e6
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.3.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2026-04-18T170405.404.json
+
+###
+
+GET http://localhost:5184/api/gates
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.3.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2026-04-18T170350.200.json
+
+###
+
+GET http://localhost:5184/api/gates
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.3.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2026-04-18T170342.200.json
+
+###
+
+GET http://localhost:5184/api/gates
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.3.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2026-04-18T170338.200.json
+
+###
+

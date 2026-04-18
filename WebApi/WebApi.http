@@ -1,6 +1,36 @@
 @WebApi_HostAddress = http://localhost:5184
 
-GET {{WebApi_HostAddress}}/weatherforecast/
+GET {{WebApi_HostAddress}}/api/gates
 Accept: application/json
 
 ###
+GET {{WebApi_HostAddress}}/api/gates/cce6ee16-89fb-462b-9dff-969b39e847e6
+Accept: application/json
+
+###
+POST {{WebApi_HostAddress}}/api/gates
+Content-Type: application/json
+
+{
+  "name": "Gate",
+  "location" : "foo",
+  "type": "Entry"
+}
+
+####
+POST {{WebApi_HostAddress}}/api/gates
+Content-Type: application/json
+
+{
+  "location" : "bar"
+}
+
+####
+PUT {{WebApi_HostAddress}}/api/gates/cce6ee16-89fb-462b-9dff-969b39e847e6
+Content-Type: application/json
+
+{
+  "name": "Gate",
+  "location" : "2-1b",
+  "type": "Entry"
+}
