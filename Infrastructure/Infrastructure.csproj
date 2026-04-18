@@ -10,4 +10,8 @@
       <ProjectReference Include="..\AppCore\AppCore.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Memory\Repositories\" />
+    </ItemGroup>
+
 </Project>

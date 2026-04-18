@@ -14,7 +14,7 @@ public class MemoryGenericRepositoryTest
         // Arrange
         var expected = new Vehicle()
         {
-            Id = Guid.Empty,
+            Id = Guid.NewGuid(),
             LicensePlate = "TK 8434Y",
             Brand = "Toyota",
             Color = "Black",
@@ -37,7 +37,7 @@ public class MemoryGenericRepositoryTest
         // Arrange
         var expected = new Vehicle()
         {
-            Id = Guid.Empty,
+            Id = Guid.NewGuid(),
             LicensePlate = "TK 8434Y",
             Brand = "Toyota",
             Color = "Black",
@@ -62,7 +62,7 @@ public class MemoryGenericRepositoryTest
         // Arrange
         var expected = new Vehicle()
         {
-            Id = Guid.Empty,
+            Id = Guid.NewGuid(),
             LicensePlate = "TK 8434Y",
             Brand = "Toyota",
             Color = "Black",
@@ -89,7 +89,7 @@ public class MemoryGenericRepositoryTest
         // Arrange
         var expected = new Vehicle()
         {
-            Id = Guid.Empty,
+            Id = Guid.NewGuid(),
             LicensePlate = "TK 8434Y",
             Brand = "Toyota",
             Color = "Black",
@@ -112,7 +112,7 @@ public class MemoryGenericRepositoryTest
         // Arrange
         var expected = new Vehicle()
         {
-            Id = Guid.Empty,
+            Id = Guid.NewGuid(),
             LicensePlate = "TK 8434Y",
             Brand = "Toyota",
             Color = "Black",
@@ -134,7 +134,7 @@ public class MemoryGenericRepositoryTest
         // Arrange
         var expected = new Vehicle()
         {
-            Id = Guid.Empty,
+            Id = Guid.NewGuid(),
             LicensePlate = "TK 8434Y",
             Brand = "Toyota",
             Color = "Black",

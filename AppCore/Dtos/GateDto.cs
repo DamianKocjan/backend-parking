@@ -1,3 +1,5 @@
+using AppCore.Models;
+
 namespace AppCore.Dtos;
 
 public record ParkingGateDto(
@@ -12,4 +14,18 @@ public record CreateGateDto(
     string Name,
     string Type,
     string Location
-);
+)
+{
+    public ParkingGate ToEntity()
+    {
+        var type = Enum.Parse<GateType>(Type);
+        
+        return new ParkingGate()
+        {
+            Name = Name,
+            Type = type,
+            Location = Location,
+            IsOperational = true
+        };
+    }
+};
