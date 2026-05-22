@@ -11,6 +11,7 @@ public static class AppCoreModule
         IConfiguration configuration)
     {
         services.AddValidatorsFromAssemblyContaining<CameraCaptureValidator>();
+        services.AddValidatorsFromAssemblyContaining<CreateCameraCaptureDtoValidator>();
         services.AddValidatorsFromAssemblyContaining<ParkingGateValidator>();
         services.AddValidatorsFromAssemblyContaining<ParkingTariffValidator>();
         

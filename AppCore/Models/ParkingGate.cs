@@ -15,6 +15,7 @@ public class ParkingGate : EntityBase
     public GateType Type { get; set; }
     public string Location { get; set; }
     public bool IsOperational { get; set; }
+    public ICollection<CameraCapture> CameraCaptures { get; set; } = new List<CameraCapture>();
     
     public static implicit operator ParkingGateDto(ParkingGate entity) =>
         new (

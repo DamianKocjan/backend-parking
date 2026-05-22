@@ -5,7 +5,8 @@ public interface IParkingUnitOfWork
     IVehicleRepository Vehicles { get; }
     IParkingGateRepository Gates { get; }
     IParkingSessionRepository Sessions { get; }
-    // pozostałe repozytoria 
+    ICameraCaptureRepository Captures { get; }
+    // pozostałe repozytoria
 
     Task<int> SaveChangesAsync();
     Task BeginTransactionAsync();

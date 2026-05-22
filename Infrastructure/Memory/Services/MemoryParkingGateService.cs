@@ -1,4 +1,5 @@
 using AppCore.Dtos;
+using AppCore.Exceptions;
 using AppCore.Models;
 using AppCore.Repositories;
 using AppCore.Services;
@@ -13,7 +14,7 @@ public class MemoryParkingGateService(IParkingUnitOfWork unit) : IParkingGateSer
         var entity = await unit.Gates.FindByIdAsync(id);
         if (entity is null)
         {
-            return null;
+            throw new GateNotFoundException($"Gate with id={id} not found!");
         }
 
         return await Task.FromResult(new ParkingGateDto(
@@ -30,7 +31,7 @@ public class MemoryParkingGateService(IParkingUnitOfWork unit) : IParkingGateSer
         var entity = await unit.Gates.FindByIdAsync(id);
         if (entity is null)
         {
-            return null;
+            throw new GateNotFoundException($"Gate with id={id} not found!");
         }
         
         entity.Name = updateGateDto.Name;
@@ -44,7 +45,7 @@ public class MemoryParkingGateService(IParkingUnitOfWork unit) : IParkingGateSer
         var entity = await unit.Gates.FindByGateNameAsync(name);
         if (entity is null)
         {
-            return null;
+            throw new GateNotFoundException($"Gate with name={name} not found!");
         }
 
         return await Task.FromResult(new ParkingGateDto(
@@ -84,11 +85,57 @@ public class MemoryParkingGateService(IParkingUnitOfWork unit) : IParkingGateSer
         var entity = await unit.Gates.FindByIdAsync(id);
         if (entity is null)
         {
-            return null;
+            throw new GateNotFoundException($"Gate with id={id} not found!");
         }
         
         entity.IsOperational = operationalStatus;
         await unit.Gates.UpdateAsync(entity);
         return entity;
+    }
+
+    public async Task<CameraCaptureDto?> AddCapture(Guid id, CreateCameraCaptureDto dto)
+    {
+        var entity = await unit.Gates.FindByIdAsync(id);
+        if (entity is null)
+        {
+            throw new GateNotFoundException($"Gate with id={id} not found!");
+        }
+
+        return await unit.Captures.AddAsync(dto.ToEntity());
+    }
+    
+    public async Task<PagedResult<CameraCaptureDto>> GetCameraCaptures(Guid id, int page, int size)
+    {
+        var entities = await unit.Captures.FindByGateIdPagedAsync(id, page, size);
+        
+        return new PagedResult<CameraCaptureDto>(
+            entities.Items.Select(x => new CameraCaptureDto(
+                x.LicensePlate,
+                x.DetectedBrand,
+                x.DetectedColor,
+                x.ParkingGate.Name,
+                x.ImagePath
+            )).ToList(),
+            entities.TotalCount,
+            entities.Page,
+            entities.PageSize
+        );
+    }
+
+    public async Task DeleteCapture(Guid id, Guid captureId)
+    {
+        var gate = await unit.Gates.FindByIdAsync(id);
+        if (gate is null)
+        {
+            throw new GateNotFoundException($"Gate with id={id} not found!");
+        }
+        
+        var capture = await unit.Captures.FindByIdAsync(captureId);
+        if (capture is null)
+        {
+            throw new CaptureNotFoundException($"Capture with id={captureId} not found!");
+        }
+        
+        await unit.Captures.RemoveByIdAsync(captureId);
     }
 }

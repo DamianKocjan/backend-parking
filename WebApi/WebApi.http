@@ -34,3 +34,18 @@ Content-Type: application/json
   "location" : "2-1b",
   "type": "Entry"
 }
+
+####
+POST {{WebApi_HostAddress}}/api/gates/cce6ee16-89fb-462b-9dff-969b39e847e6/captures
+Content-Type: application/json
+
+{
+  "imagePath": "captures/gate-cce6/frame-001.jpg"
+}
+
+####
+GET {{WebApi_HostAddress}}/api/gates/cce6ee16-89fb-462b-9dff-969b39e847e6/captures?page=1&size=10
+Accept: application/json
+
+####
+DELETE {{WebApi_HostAddress}}/api/gates/cce6ee16-89fb-462b-9dff-969b39e847e6/captures/00000000-0000-0000-0000-000000000001

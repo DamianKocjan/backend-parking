@@ -14,12 +14,22 @@ public class CameraCaptureValidator : AbstractValidator<CameraCaptureDto>
 
         RuleFor(x => x.Brand)
             .NotEmpty().WithMessage("Marka pojazdu jest wymagana.");
-        
+
         RuleFor(x => x.Color)
             .NotEmpty().WithMessage("Marka pojazdu jest wymagana.");
-        
+
         RuleFor(x => x.GateName)
             .NotEmpty().WithMessage("Nazwa bramki jest wymagana.")
             .MaximumLength(20).WithMessage("Nazwa bramki nie może przekraczać 20 znaków.");
+    }
+}
+
+public class CreateCameraCaptureDtoValidator : AbstractValidator<CreateCameraCaptureDto>
+{
+    public CreateCameraCaptureDtoValidator()
+    {
+        RuleFor(x => x.ImagePath)
+            .NotEmpty().WithMessage("Sciezka do obrazu jest wymagana.")
+            .MaximumLength(255).WithMessage("Sciezka do obrazu nie moze przekraczac 255 znakow.");
     }
 }
