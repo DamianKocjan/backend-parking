@@ -1,7 +1,4 @@
-using AppCore.Repositories;
-using AppCore.Services;
-using Infrastructure.Memory;
-using Infrastructure.Memory.Services;
+using Infrastructure.EntityFramework;
 using WebApi;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,16 +10,7 @@ builder.Services.AddOpenApi();
 builder.Services.AddExceptionHandler<ProblemDetailsExceptionHandler>();    
 builder.Services.AddProblemDetails();
 
-builder.Services.AddScoped<IParkingGateRepository, MemoryParkingGateRepository>();
-builder.Services.AddScoped<IParkingSessionRepository, MemoryParkingSessionRepository>();
-builder.Services.AddScoped<IVehicleRepository, MemoryVehicleRepository>();
-builder.Services.AddScoped<ICameraCaptureRepository, MemoryCameraCaptureRepository>();
-
-builder.Services.AddScoped<IParkingUnitOfWork, MemoryParkingUnitOfWork>();
-
-builder.Services.AddScoped<IParkingGateService, MemoryParkingGateService>();
-builder.Services.AddScoped<ICameraCaptureService, MemoryCameraCaptureService>();
-
+builder.Services.AddParkingEfModule(builder.Configuration);
 builder.Services.AddAppCoreModule(builder.Configuration);
 
 builder.Services.AddControllers();
