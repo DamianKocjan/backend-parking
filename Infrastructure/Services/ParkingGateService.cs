@@ -5,9 +5,9 @@ using AppCore.Repositories;
 using AppCore.Services;
 using AppCore.ValueObjects;
 
-namespace Infrastructure.Memory.Services;
+namespace Infrastructure.Services;
 
-public class MemoryParkingGateService(IParkingUnitOfWork unit) : IParkingGateService
+public class ParkingGateService(IParkingUnitOfWork unit) : IParkingGateService
 {
     public async Task<ParkingGateDto?> GetById(Guid id)
     {

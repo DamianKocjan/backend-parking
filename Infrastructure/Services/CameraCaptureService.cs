@@ -4,9 +4,9 @@ using AppCore.Models;
 using AppCore.Repositories;
 using AppCore.Services;
 
-namespace Infrastructure.Memory.Services;
+namespace Infrastructure.Services;
 
-public class MemoryCameraCaptureService(IParkingUnitOfWork unit) : ICameraCaptureService
+public class CameraCaptureService(IParkingUnitOfWork unit) : ICameraCaptureService
 {
     public async Task<CameraCaptureDto?> GetById(Guid id)
     {
