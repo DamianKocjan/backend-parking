@@ -4,6 +4,7 @@ namespace AppCore.Services;
 
 public interface ICameraCaptureService
 {
+    Task<CameraCaptureDto?> GetById(Guid id);
     Task<CameraCaptureDto> ProcessCaptureAsync(CameraCaptureWithGateDto captureDto);
-    Task<bool> RemoveCaptureAsync(CameraCaptureDto captureDto);
+    Task RemoveCaptureAsync(Guid id);
 }

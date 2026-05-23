@@ -124,18 +124,8 @@ public class MemoryParkingGateService(IParkingUnitOfWork unit) : IParkingGateSer
 
     public async Task DeleteCapture(Guid id, Guid captureId)
     {
-        var gate = await unit.Gates.FindByIdAsync(id);
-        if (gate is null)
-        {
-            throw new GateNotFoundException($"Gate with id={id} not found!");
-        }
-        
-        var capture = await unit.Captures.FindByIdAsync(captureId);
-        if (capture is null)
-        {
-            throw new CaptureNotFoundException($"Capture with id={captureId} not found!");
-        }
-        
+        await GetById(id);
+        await unit.Captures.FindByIdAsync(captureId);
         await unit.Captures.RemoveByIdAsync(captureId);
     }
 }

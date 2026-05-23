@@ -1,28 +1,59 @@
 using AppCore.Dtos;
+using AppCore.Exceptions;
+using AppCore.Models;
+using AppCore.Repositories;
 using AppCore.Services;
 
 namespace Infrastructure.Memory.Services;
 
-public class MemoryCameraCaptureService : ICameraCaptureService
+public class MemoryCameraCaptureService(IParkingUnitOfWork unit) : ICameraCaptureService
 {
-    public Task<CameraCaptureDto> ProcessCaptureAsync(CameraCaptureWithGateDto captureDto)
+    public async Task<CameraCaptureDto?> GetById(Guid id)
     {
-        // TODO: Implement file saving
-        // Simulate processing the capture and returning a result
-        var result = new CameraCaptureDto(
-            LicensePlate: "ABC123",
-            Brand: "Toyota",
-            Color: "Red",
-            GateName: captureDto.GateName,
-            ImagePath: captureDto.ImagePath
-        );
+        var entity = await unit.Captures.FindByIdAsync(id);
+        if (entity is null)
+        {
+            throw new CaptureNotFoundException($"Capture with id={id} not found!");
+        }
 
-        return Task.FromResult(result);
+        return await Task.FromResult(new CameraCaptureDto(
+            LicensePlate: entity.LicensePlate,
+            Brand: entity.DetectedBrand,
+            Color: entity.DetectedColor,
+            GateName: entity.ParkingGate.Name,
+            ImagePath: entity.ImagePath
+        ));
     }
 
-    public Task<bool> RemoveCaptureAsync(CameraCaptureDto captureDto)
+    public async Task<CameraCaptureDto> ProcessCaptureAsync(CameraCaptureWithGateDto captureDto)
     {
+        var parkingGate = await unit.Gates.FindByGateNameAsync(captureDto.GateName);
+        if (parkingGate is null)
+        {
+            throw new GateNotFoundException($"Gate with name={captureDto.GateName} not found!");
+        }
+     
+        // TODO: Implement file saving
+        // Simulate processing the capture and returning a result   
+        return await unit.Captures.AddAsync(new CameraCapture()
+        {
+            LicensePlate = "ABC123",
+            DetectedBrand = "Toyota",
+            DetectedColor = "Red",
+            ParkingGate = parkingGate,
+            ImagePath = captureDto.ImagePath,
+        });
+    }
+
+    public async Task RemoveCaptureAsync(Guid id)
+    {
+        var entity = await unit.Captures.FindByIdAsync(id);
+        if (entity is null)
+        {
+            throw new CaptureNotFoundException($"Capture with id={id} not found!");
+        }
+        
         // TODO: Implement logic for removing captures from file storage
-        return Task.FromResult(true);
+        await unit.Captures.RemoveByIdAsync(id);
     }
 }
