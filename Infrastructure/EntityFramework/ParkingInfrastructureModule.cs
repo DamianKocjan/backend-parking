@@ -51,7 +51,8 @@ public static class ParkingInfrastructureModule
         services.AddScoped<IParkingUnitOfWork, EfParkingUnitOfWork>();
         services.AddScoped<ICameraCaptureService, CameraCaptureService>();
         services.AddScoped<IParkingGateService, ParkingGateService>();
-
+        services.AddScoped<IReportService, ReportService>();
+        services.AddScoped<IDataExportService, DataExportService>();
         return services;
     }
     

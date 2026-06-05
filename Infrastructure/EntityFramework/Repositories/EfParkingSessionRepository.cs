@@ -35,6 +35,25 @@ public class EfParkingSessionRepository(ParkingDbContext context) : EfGenericRep
 			.OrderByDescending(ps => ps.EntryTime)
 			.ToListAsync();
 	}
+
+	public async Task<IEnumerable<ParkingSession>> GetSessionsAsync(DateTime? startDate, DateTime? endDate, string? gateName, string? licensePlate)
+	{
+		var query = Set.AsNoTracking().Include(ps => ps.Vehicle).AsQueryable();
+
+		if (startDate.HasValue)
+			query = query.Where(ps => ps.EntryTime >= startDate.Value);
+
+		if (endDate.HasValue)
+			query = query.Where(ps => ps.EntryTime <= endDate.Value);
+
+		if (!string.IsNullOrWhiteSpace(gateName))
+			query = query.Where(ps => ps.GateName == gateName);
+
+		if (!string.IsNullOrWhiteSpace(licensePlate))
+			query = query.Where(ps => ps.Vehicle.LicensePlate == licensePlate);
+
+		return await query.OrderByDescending(ps => ps.EntryTime).ToListAsync();
+	}
 }
 
 
