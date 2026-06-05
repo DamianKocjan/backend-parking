@@ -1,4 +1,3 @@
-using System.ComponentModel.DataAnnotations;
 using AppCore.Models;
 using Microsoft.AspNetCore.Identity;
 
@@ -15,12 +14,11 @@ public class AppRole : IdentityRole
     }
 }
 	
-public class AppUser:  IdentityUser, ISystemUser
+public class AppUser : IdentityUser, ISystemUser
 {
     public required string FirstName { get; set; }
     public required string LastName { get; set; }
     public required string FullName { get; set; }
-    public required string Email { get; set; }
     public required string Department { get; set; }
     public required SystemUserStatus Status { get; set; }
     public DateTime CreatedAt { get; set;  }

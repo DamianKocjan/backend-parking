@@ -9,20 +9,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69a88c77-e146-4b65-80db-c4e5f62b40bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/AppCore/Models/User.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/EntityFramework/Context/ParkingDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/EntityFramework/ParkingInfrastructureModule.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/EntityFramework/Repositories/EfCameraCaptureRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/EntityFramework/Repositories/EfGenericRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/EntityFramework/Repositories/EfParkingGateRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/EntityFramework/Repositories/EfParkingSessionRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/EntityFramework/Repositories/EfVehicleRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/EntityFramework/UnitOfWork/EfParkingUnitOfWork.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Identity/AppUser.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppCore/Authorization/AppPolicies.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppCore/Dtos/AuthorizationDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppCore/Dtos/UserDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppCore/Services/IAuthService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/Identity/IDataSeeder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/Identity/IdentityDbSeeder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/Security/JwtSettings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/Security/RefreshToken.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/Services/AuthService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApi/Controller/AuthController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.backend-parking/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend-parking/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppCore/Module/ContactsModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppCore/Module/ParkingModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/EntityFramework/Context/ParkingDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/EntityFramework/Context/ParkingDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/EntityFramework/ParkingInfrastructureModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/EntityFramework/ParkingInfrastructureModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Identity/AppUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Identity/AppUser.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/Controller/GatesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/Controller/GatesController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/WebApi.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/WebApi.http" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/WebApi.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApi/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend-parking.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/backend-parking.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +53,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6fa05d7dbf2e454ce78b261b422234da1f1ccedee678fd997e5ef4afe6df6e/ControllerBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7d382df578ec93391918cfaa4ce7f4b8f35c9aed1241d6556dc9be26df13c/IdentityUser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AppCore/Dtos/CameraCaptureDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AppCore/Dtos/GateDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AppCore/Dtos/ParkingSessionDto.cs" root0="FORCE_HIGHLIGHTING" />
@@ -59,7 +68,6 @@
     <setting file="file://$PROJECT_DIR$/AppCore/Models/ParkingTariff.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AppCore/Models/User.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AppCore/Models/Vehicle.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AppCore/Module/ContactsModule.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AppCore/Repositories/ICameraCaptureRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AppCore/Repositories/IParkingGateRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AppCore/Repositories/IParkingSessionRepository.cs" root0="FORCE_HIGHLIGHTING" />
@@ -69,12 +77,9 @@
     <setting file="file://$PROJECT_DIR$/AppCore/Validators/ParkingGateValidator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AppCore/Validators/ParkingTariffValidator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AppCore/ValueObjects/PagedResult.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Infrastructure/Memory/MemoryGenericRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Infrastructure/Memory/MemoryParkingGateRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Infrastructure/Memory/MemoryParkingsessionRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Infrastructure/Memory/MemoryVehicleRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Infrastructure/Memory/Services/MemoryCameraCaptureService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Infrastructure/Identity/IDataSeeder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnitTest/MemoryGenericRepositoryTest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApi/Controller/AuthController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApi/ProblemDetailsExceptionHandler.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />

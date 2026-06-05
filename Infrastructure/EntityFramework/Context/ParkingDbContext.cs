@@ -1,5 +1,6 @@
 using AppCore.Models;
 using Infrastructure.Identity;
+using Infrastructure.Security;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -23,6 +24,7 @@ public class ParkingDbContext : IdentityDbContext<AppUser, AppRole, string>
     public DbSet<ParkingSession> Sessions => Set<ParkingSession>();
     public DbSet<ParkingTariff> Tariffs => Set<ParkingTariff>();
     public DbSet<CameraCapture> Captures => Set<CameraCapture>();
+    public DbSet<RefreshToken> RefreshTokens =>  Set<RefreshToken>();
 
     public ParkingDbContext()
     {
@@ -120,8 +122,6 @@ public class ParkingDbContext : IdentityDbContext<AppUser, AppRole, string>
                 .OnDelete(DeleteBehavior.Cascade);
         });
 
-        var passwordHasher = new PasswordHasher<AppUser>();
-
         var adminUser = new AppUser
         {
             Id = AdminUserId,
@@ -138,9 +138,9 @@ public class ParkingDbContext : IdentityDbContext<AppUser, AppRole, string>
             CreatedAt = new DateTime(2026, 1, 1, 1, 0, 0, DateTimeKind.Utc),
             SecurityStamp = "6c8dbe1e-1c6a-4f56-8ed8-9cb4f5c7b501",
             ConcurrencyStamp = "6c8dbe1e-1c6a-4f56-8ed8-9cb4f5c7b501",
-            LockoutEnabled = false
+            LockoutEnabled = false,
+            PasswordHash = "AQAAAAIAAYagAAAAEJMQOpIMU2oDDVo/ZKqBNhBDUez32z/ouSOJis0B/QR9NHM2lSlGzXo3WxPyxnImKw==" // Admin123!
         };
-        adminUser.PasswordHash = passwordHasher.HashPassword(adminUser, "Admin123!");
 
         var registeredUser = new AppUser
         {
@@ -160,7 +160,7 @@ public class ParkingDbContext : IdentityDbContext<AppUser, AppRole, string>
             ConcurrencyStamp = "7f0a0d9e-8d6a-4d5c-8f68-51d7e4a11d4a",
             LockoutEnabled = false
         };
-        registeredUser.PasswordHash = passwordHasher.HashPassword(registeredUser, "User123!");
+        registeredUser.PasswordHash = "AQAAAAIAAYagAAAAEB4KDd3YzVWAHFPbvznzcRdDRGrgc+MrG+/+3SdCyWUz+xqa/trGL27DtXbUDSglgw=="; // User123!
 
         builder.Entity<AppRole>().HasData(
             new AppRole(UserRole.Administrator.ToString())
